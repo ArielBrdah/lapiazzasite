@@ -1,0 +1,1011 @@
+html{
+  scroll-behavior:smooth;
+  transition:3.7s;
+}
+
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: transparent;
+  overflow-x:hidden;
+}
+
+
+
+
+
+
+
+/*** LOADER WEBPAGE ANIMATION **/
+
+.website-wrapper{
+  display:none;
+}
+
+.loader{
+  width:100%;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:1s;
+  opacity:1;
+}
+
+.bounce-in-top {
+	-webkit-animation: bounce-in-top 2.1s infinite alternate both;
+	        animation: bounce-in-top 2.1s infinite alternate both;
+}
+
+/**
+ * ----------------------------------------
+ * animation bounce-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes bounce-in-top {
+  0% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+            transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+            transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes bounce-in-top {
+  0% {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+            transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+            transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+
+/** END LOADER WEBPAGE ANIMATION ***/
+
+
+
+
+
+
+
+
+
+/** PHOTO ACCUEIL DIMENSION PARALLAX **/
+
+.pic-wrapper{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  overflow:hidden;
+  
+  width:100%;
+  min-height:100vh;
+    background-image: url("https://www.leclandesmamma.com/andrea-paris/wp-content/uploads/sites/6/2018/09/Restaurant-italien-paris-batignolles-e1536069166761.png");
+    background-attachment: fixed;
+  background-position: 50% 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.dicton-italien{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  flex-direction:column;
+  font-size:20px;
+  font-family:'Open sans';
+  color:white;
+  
+}
+
+
+/** FIN PHOTO ACCUEIL DIMENSION PARALLAX **/
+
+
+
+
+
+
+
+
+
+
+/** ANIMATION STYLE UNDERLINE OUTBOUND ( DES 2 COTES ) **/
+
+.underline{
+  position:relative;
+}
+.underline::before,.underline::after{
+  content:'';
+  position:absolute;
+  top:2rem;
+  width:0%;
+  height:1px;
+  background:black;
+  transition:0.2s;
+}
+
+
+.underline::before{
+  left:50%;
+}
+.underline::after{
+  right:50%;
+}
+
+.underline:hover::after{
+  width:25%;
+}
+
+.underline:hover::before{
+  width:25%;
+}
+
+/** FIN DE L'ANIMATION STYLE UNDERLINE OUTBOUND ( DES 2 COTES ) **/
+
+
+
+
+
+
+
+
+/** MENU HEADER STYLE **/
+
+header{
+  position: sticky;
+  top:0;
+  z-index:13;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+ grid-template-areas:
+    "mobilemenu homemenu button-wrapper";
+  background:white;
+  min-height:86px;
+  transition:0.4s;
+  height:106px;
+}
+
+#homemenunav{
+  transition:0.4s;
+}
+
+#homemenunav svg{
+  transition:0.4s;
+}
+  
+ #homemenu{
+  line-height: 10px;
+   grid-area: homemenu;
+}
+
+header,button{
+  text-transform:uppercase;
+}
+
+ul{
+  display:flex;
+  justify-content:center;
+}
+li{
+  display:flex;
+  align-items:center;
+  padding:0 1rem;
+  margin:0 .2rem 0 0;
+}
+.logo{
+  display:flex;
+  align-self:center;
+}
+
+a{
+  color: #575b5c;
+  text-decoration:none;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  outline: none;
+  font-weight: 700;
+}
+/** FIN MENU HEADER STYLE **/
+
+
+
+
+
+
+
+
+
+
+/** BOUTON COMMANDER STYLE **/
+
+.button-wrapper{
+   grid-area: button-wrapper;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+/*   background: red; */
+}
+#commander{
+      background: transparent none repeat scroll 0 0;
+    border: 2px solid;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    z-index: 1;
+    color: #000;
+    min-width: 120px;
+  cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 14px;
+    padding: 13px 10px 11px;
+  
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#commander:hover {
+    border: 2px solid #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+#commander::before {
+    background: #000;
+    content: "";
+    height: 102%;
+    left: -10%;
+    position: absolute;
+    top: 0;
+    transform: skewX(
+20deg
+);
+    transition: width 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    width: 0;
+    z-index: -1;
+}
+
+#commander:hover::before {
+    width: 120%;
+}
+
+/*** FIN STYLE BOUTON COMMANDER **/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** HAMBURGER ICON */
+
+.trait{
+  transition:0.37s;
+}
+
+.centered-el{
+  transform-origin: 50% 50%;  
+}
+
+@media only screen and (min-width:1100px){
+  
+  #hamburger{
+    display:none;
+  }
+  
+}
+
+/** FIN HAMBURGER ICON **/
+
+
+
+
+
+
+
+
+
+
+
+/** RESPONSIVE SMARTPHONE **/
+
+
+/** ON DESKTOP */
+#mobilemenu{
+  display:none;
+}
+.logo-phone{
+  display:none;
+}
+
+
+/** ON SMARTPHONE */
+@media only screen and (max-width:1100px){
+  
+
+  
+    /** SHOW LOGO MENU ON SMARTPHONE **/
+    .logo-phone{
+      display:block;
+      cursor:pointer;
+    }
+    /** SHOW LOGO MENU ON SMARTPHONE **/
+  
+  
+  
+  
+    /** HIDE DESKTOP MENU **/  
+    header{
+        overflow:hidden;
+      }
+    /** END HIDE DESKTOP MENU **/
+  
+  
+  
+  
+    /** UNDERLINE **/
+
+    a:hover::after,a:hover::before{
+      width:0%;
+    }
+
+    /** END OF UNDERLINE **/
+  
+  
+      header{
+        height:13vh;
+        align-items:center;
+      }
+  
+  
+  
+  
+  
+  
+    /** HAMBURGER ICON FOR SMARTPHONE **/
+      .trait{
+      transition:0.37s;
+       }
+
+      .centered-el{
+        transform-origin: 50% 50%;  
+      }
+    /** END HAMBURGER ICON FOR SMARTPHONE **/
+  
+ 
+  
+  
+  
+  /*** HAMBURGER MENU ELEMENTS **/
+  #hamburger{
+    display:flex;
+    justify-content:start;
+    fill:black;
+    cursor:pointer;
+    margin-left:20px;
+  }
+  #hamburger li{
+    z-index:11;
+  }
+  #homemenu{
+    grid-area:mobilemenu;
+  }
+  #homemenunav{
+    display:none;
+  }
+  .button-wrapper{
+    display:none;
+  }
+  
+  #mobilemenu{
+    z-index:20;
+    display:flex;
+    align-items:start;
+    justify-content:start;
+    height:100vh;
+    width:0%;
+    background:rgba(0,0,0,0.5);
+    overflow:hidden;   
+    position:fixed;
+    top:0;
+    left:0;  
+    transition: all 0.7s;
+  }
+  
+
+  #mobilemenu ul{
+    opacity:unset;
+      display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    width: 40vmax;
+    height: 100vh;
+    position:relative;
+    background: white;
+    align-items:start;
+    justify-content: flex-start;
+    padding-top: 20vh;
+  }
+  
+    #mobilemenu ul li{
+    border-bottom: solid rgb(250,250,250) 0.3px;
+    width:80%;    
+   padding: 10px 0;
+  }
+  
+  
+  #mobilemenu ul li a{
+    //position:absolute;
+    width:0%;
+    transition: .4s;
+    left:30px;
+    color:black;
+    letter-spacing:0.75px;
+    line-height:16px;
+
+  }
+
+  
+  #mobilemenu ul li a{
+    font-size:16px;
+    text-transform:uppercase;
+  }
+  
+  /*** END HAMBURGER MENU ELEMENTS **/
+}
+
+
+
+
+
+/** SECTION ACCUEIL, DECORAZIONE, CUCINA **/
+
+#content{
+/*   max-width:1280px; */
+  margin:0 10vw;
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  //padding-top: 40px;
+}
+#decorazione,#cucina{
+  padding-top:100px 0;
+}
+/** END SECTION ACCUEIL, DECORAZIONE, CUCINA **/
+
+
+
+
+
+
+
+
+/** SECTION STYLE **/
+
+.title-presentation{
+  text-align:center;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+@font-face{
+  font-family: 'MillerDisplay Semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Tangerine'), url('https://github.com/kevinzenghu/FT-Edge/raw/master/public/MillerDisplay-Semibold.ttf') format('truetype');
+}
+
+.title-presentation h2{
+  line-height:31px;
+    font-size:32px;
+  font-weight:700;
+  margin-bottom:0;
+  font-family:'MillerDisplay Semibold';
+}
+
+.title-presentation h3{
+  font-family:'Josefin Sans', sans-serif;
+  font-size:26px;
+  font-weight:300;
+  line-height:28px;
+  margin-top:0;
+  margin-bottom:21px;
+}
+
+.wrapper-content-presentation{
+    font-family:'MillerDisplay Semibold';
+  font-weight:400;
+  font-size: 15px;
+  color:rgb(108,120,128);
+  line-height:24px;
+  margin-bottom:21px;
+  letter-spacing:normal;
+  text-align:center;
+}
+
+.wrapper-content-presentation p{
+  line-height:24px;
+}
+
+/** END SECTION STYLE **/
+
+
+
+
+
+
+
+/** ESPACES + DRAPEAUX ITALIENS **/
+.presentation{
+  padding:150px 0;
+}
+.clearfix{
+  height:100px;
+  width:100%;
+}
+.hline-green{
+  margin:60px 0;
+  position:relative;
+  background:#009246;
+  height:2px;
+    width:calc(100%/3);
+}
+.hline-space{
+  margin:60px 0;
+  position:relative;
+  height:2px;
+  width:calc(100%/3);
+}
+.hline-red{
+  position:relative;
+  margin:60px 0;
+  background:#ce2b37;
+  height:2px;
+  width:calc(100%/3);
+}
+
+.container-hline{
+  position:relative;
+  height:126px;
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+}
+
+
+@media only screen and (max-width:1100px){
+  .container-hline{
+    flex-direction:column;
+    flex-wrap:wrap;
+    height:auto;
+     }
+  .hline-red,.hline-green,.hline-space{
+    width:100%;
+    margin:40px 0;
+  }
+}
+/** FIN DES ESPACES DRAPEAUX ITALIENS **/
+
+
+
+
+
+
+
+
+
+/*** GALLERIE **/
+
+#galery{
+  height:auto;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:row;
+  flex-wrap:wrap;}
+
+.galery-container{
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.img-wrapper{
+  position:relative;
+  cursor:pointer;
+  background:black;
+  width:25vmin;
+  min-width:300px;
+  min-height:300px;
+  height:25vmin;
+  margin:10px;
+  overflow:hidden;
+}
+.img-wrapper img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  transition:3s;
+  transition-timing-function: cubic-bezier(.17,.67,.67,1.04);
+}
+.img-wrapper:after{  
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:25vmin;
+  min-width:300px;
+  min-height:300px;
+  height:25vmin;
+  background:rgba(0,0,0);
+  opacity:0;
+  transition: opacity 1.2s;
+}
+
+.img-wrapper:hover::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:25vmin;
+  min-width:300px;
+  min-height:300px;
+  height:25vmin;
+  background:rgba(0,0,0);
+  opacity:0.3;
+}
+.loupe{
+  z-index:100;
+  opacity:0;
+  position:absolute;
+  top:48%;
+  left:48%;
+  width:30px;
+  height:30px;
+  transform:translate(-50%,-50%)  scale(0.5);
+  color:white;
+  transition:1s;
+  transition-timing-function: cubic-bezier(.05,.7,.02,1.01);
+  
+}
+
+.img-wrapper:hover .loupe{
+  opacity:1;
+  transform:translate(-50%,-50%) scale(1);
+}
+
+.img-wrapper:hover img{
+  transform:scale(1.5);
+}
+
+.loupe path, .loupe line{
+    z-index:100;
+  stroke:white;
+  color:white;
+}
+
+/*** END OF GALLERY ***/
+
+
+
+
+
+
+
+/*** SHOW IMAGE **/
+
+.view{
+  z-index:102;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background: rgba(0,0,0,0.7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:1s;
+  
+  
+  /*** do the gallerie **/
+  display:none; /***/
+}
+
+.view-container{
+  position:absolute;
+  top:0;
+  left:0;
+  display:flex;
+  flex-direction:row;
+  height:100vh;
+  width:auto;
+  transition:0.4s;
+}
+
+.card-container{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100vw;
+  height:100vh;
+}
+
+.view p{
+  position:fixed;
+  bottom:3%;
+  font-size:14px;
+  color:white;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+ 
+.previous,.next{
+  position:fixed;
+  top:50%;
+  font-size:58px;
+  color:white;
+  cursor:pointer;
+}
+.previous{
+  left:5%;
+}
+.next{
+  right:5%;
+}
+
+
+.view img{
+  width:80vmin;
+  height:80vmin;
+  object-fit:cover;
+  transform:scale(0);
+  transition:0.4s;
+}
+/*** END SHOW IMAGE **/
+
+
+
+
+
+
+
+
+/** BASTA SECTION **/
+.basta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height: 25vh;
+  font-family:'MillerDisplay SemiBold';
+  font-size:24px;
+  font-weight:bold;
+}
+
+.basta-pic-wrapper{
+  width:100%;
+  height:300px;
+  background:black;
+  overflow:hidden;
+  background-image: url("https://www.leclandesmamma.com/gabriella-lyon/wp-content/uploads/sites/3/2017/11/produits-frais-et-cuisine-italienne.jpg");
+    background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/** END BASTA SECTION **/
+
+
+
+
+
+
+
+/** INFORMATION SECTION **/
+#information{
+  display:flex;
+  flex-direction:row;
+  margin:60px;
+  flex-wrap:wrap;
+}
+.information-wrapper{
+  display:flex;
+  justify-content:start;
+  align-items:start;
+  flex-direction:column;
+  width:50%;
+  min-width:300px;
+}
+.information-wrapper h2{
+  font-family:'Josefin Sans';
+  font-size:26px;
+  text-transform:uppercase;
+  font-weight:300;
+  letter-spacing:2px;
+  line-height:28px;
+  margin-bottom:21px;
+}
+.information-wrapper h3{
+  font-family:'MillerDisplay SemiBold';
+  font-weight:bold;
+  font-size:22px;
+  letter-spacing:2px;
+  line-height:37.18px;
+  margin-bottom:21px;
+}
+
+.information-wrapper p{
+  font-family:'MillerDisplay SemiBold';
+  color:rgb(108,120,128);
+  font-size:15px;
+  line-height:24px;
+  font-wight:400;
+  margin-bottom:21px;
+}
+
+
+.information-wrapper p strong{
+  color:rgb(108, 120, 128);
+  font-weight:bold;
+}
+.information-pic-wrapper{
+  background-image:url(https://www.leclandesmamma.com/andrea-paris/wp-content/uploads/sites/6/2018/09/resto-italien-paris-17.jpg);
+  width:50%;
+  min-width: 80vmin;/**746px; ***/
+  min-height: 1024px;
+  background-position:center;
+  background-repeat:no-repeat;
+  overflow:hidden;
+}
+
+@media only screen and (max-width:746px){
+  #information{
+    /** width:100vw;
+    height:100%; **/
+    margin:30px;
+  }
+  
+  #mobilemenu ul{
+    width:100%;
+  }
+}
+/** END INFORMATION SECTION **/
+
+
+
+
+
+
+/*** FOOTER ***/
+
+footer{
+  width:100%;
+  height:150px;
+  background:black;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+footer p{
+  text-align:center;
+  font-weight:300px;
+  font-size:11px;
+}
+/** FOOTER */
